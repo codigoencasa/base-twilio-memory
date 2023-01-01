@@ -40,10 +40,9 @@ const flowPrincipal = addKeyword(['hola', 'ole', 'alo'])
     .addAnswer(
         [
             'te comparto los siguientes links de interes sobre el proyecto',
-            '👉 **doc** para ver la documentación',
-            '👉 **gracias** para ver las formas de apoyar este proyecto',
-            '👉 **tutorial** para ver la lista de videos',
-            '👉 **discord** unirte al discord',
+            '👉 *doc* para ver la documentación',
+            '👉 *gracias*  para ver la lista de videos',
+            '👉 *discord* unirte al discord',
         ],
         null,
         null,
@@ -52,7 +51,7 @@ const flowPrincipal = addKeyword(['hola', 'ole', 'alo'])
 
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowPrincipal])
+    const adapterFlow = createFlow([flowPrincipal, flowDocs, flowGracias, flowTuto, flowDiscord])
 
     const adapterProvider = createProvider(TwilioProvider, {
         accountSid: process.env.ACC_SID,
