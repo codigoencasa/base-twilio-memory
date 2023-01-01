@@ -22,7 +22,7 @@ const main = async () => {
         accountSid: process.env.ACC_SID,
         authToken: process.env.ACC_TOKEN,
         vendorNumber: process.env.ACC_VENDOR,
-    })
+    },3001)
 
     createBot({
         flow: adapterFlow,
